@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup_form.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/GreenOrganic.png" alt="Green Organic Logo" style="height: 140px; border-radius: 50%;" >
+            <a href="home.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="IndoorPlants.html">Shop</a>
+            <a href="info.html">Info</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="signup">
+            <h1 class="sign">Sign Up</h1>
+            <form name="form2">
+                <label>First Name</label>
+                <input type="text" name="fname1"  placeholder="Neha" required>
+                <label>Last Name</label>
+                <input type="text" name="lname1"  placeholder="Kapoor" required>
+                <label>Email</label>
+                <input type="email" name="email1" id="email1"  placeholder="kapoor@gmail.com" required>
+                <label>Password</label>
+                <input type="password" name="password1" required>
+                <input type="button" value="Submit" onclick="display();">
+            </form>
+        </div>
+        <p class="para2">Already have an account? <a href="login.html">Login here</a></p>
+    </main>
+    <footer>
+        <a href="home.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="IndoorPlants.html">Shop</a>
+        <a href="info.html">Info</a>
+        <a href="login.html">Login</a>
+        <br>
+        <br>
+        <a href="IndoorPlants.html">Indoor Plants |</a>
+        <a href="Flowering.html">Flowering Plants |</a>
+        <a href="Outdoor.html">Outdoor Plants |</a>
+        <a href="clay.html">Clay Pots</a>
+        <a class="copyright">&copy; 2022 | Green Organic</a>
+    </footer>
+    <script language="JavaScript" type="text/javascript">
+        function display() {
+        DispWin = window.open('','NewWin','toolbar=no,status=no,width=300,height=200')
+        message = "<ul><li><b>FIRST NAME: </b>" + document.form2.fname1.value;
+        message += "<li><b>LAST NAME: </b>" + document.form2.lname1.value;
+        message+="<li><b>EMAIL: </b>" + document.form2. email1.value + "</ul>";
+        DispWin.document.write(message);
+        }
+        </script>
+</body>
+</html>

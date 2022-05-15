@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Organic|Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function welcome(who){
+            alert("GREETINGS " + who);
+        }
+    </script>
+</head>
+<body>
+    <marquee class="marquee">We are currently accepting orders from all over India, but the dispatch will be done after 10 
+        Business days due to the COVID-19 restrictions. Thank you for supporting us in such tough times.
+    </marquee>
+    <header>
+        <nav>
+            <img src="images/GreenOrganic.png" alt="Green Organic Logo" style="height: 140px; border-radius: 50%;" >
+            <a href="home.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="#shop">Shop</a>
+            <a href="info.html">Info</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/background2.jpg" style="width:100%;height: 420px;">
+                <div class="text">"A Beautifull Plant is Like <br>Having a Friend Around the House"</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/background1.jpg" style="width:100%;height: 420px;">
+                <div class="text">“Where flowers bloom, so does hope”</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/background.jpg" style="width:100%;height: 420px;">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        
+        <section>
+            <h2 id="shop">Our Products</h2>
+            <div class="products" >
+                <div class="inplants">
+                    <a href="IndoorPlants.html"><img src="images/indoor.jpg" alt="Indoor Plants" id="inplant1"></a>
+                    <h3>Indoor Plants</h3>
+                </div>
+                <div class="inplants">
+                    <a href="Flowering.html"><img src="images/flowering.jpg" alt="Flowering Plants" id="inplant2"></a>
+                    <h3>Flowering Plants</h3>
+                </div>
+                <div class="inplants">
+                    <a href="Outdoor.html"><img src="images/outdoor.png" alt="Outdoor Plants" id="inplant3"></a>
+                    <h3>Outdoor Plants</h3>
+                </div>
+                <div class="inplants">
+                    <a href="clay.html"><img src="images/pots.jpg" alt="Clay Pots" id="inplant4"></a>
+                    <h3>Clay Pots</h3>
+                </div>
+            </div>
+            
+        </section>
+        <br>
+        <br>
+        <section>
+            <h2>Best Sellers</h2>
+            <div class="best">
+                <div class="seller">
+                    <img src="images/marble.png" id="seller1">
+                    <h3>Marble Queen Money Plant</h3>
+                    <a href="payment_form.html"><button class="buy_btn">BUY</button></a>
+                </div>
+                <div class="seller">
+                    <img src="images/pisonia.jpg" id="seller2">
+                    <h3>Pisonia Alba</h3>
+                    <a href="payment_form.html"><button class="buy_btn">BUY</button></a>
+                </div>
+                <div class="seller">
+                    <img src="images/aralia.jpg" id="seller3">
+                    <h3>Aralia</h3>
+                    <a href="payment_form.html"><button class="buy_btn">BUY</button></a>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section>
+            <h2>Why Choose Us ?</h2>
+            <div class="choose">
+                <img src="images/ENVIRONMENT FRIENDLY.png" alt="ENVIRONMENT FRIENDLY" id="choose1">
+            </div>
+            <div class="choose">
+                <img src="images/WOMEN UPLIFTMENT.png" alt="WOMEN UPLIFTMENT" id="choose2">
+            </div>
+            <div class="choose">
+                <img src="images/AFFORDABLE.png" alt="AFFORDABLE" id="choose3">
+            </div>
+            <div class="choose">
+                <img src="images/ORGANIC.png" alt="ORGANIC" id="choose4">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="home.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="IndoorPlants.html">Shop</a>
+        <a href="info.html">Info</a>
+        <a href="login.html">Login</a>
+        <br>
+        <br>
+        <a href="IndoorPlants.html">Indoor Plants |</a>
+        <a href="Flowering.html">Flowering Plants |</a>
+        <a href="Outdoor.html">Outdoor Plants |</a>
+        <a href="clay.html">Clay Pots</a>
+        <a class="copyright">&copy; 2022 | Green Organic</a>
+    </footer>
+    <script>
+        welcome("EVERYONE");
+    </script>
+     <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); 
+        }
+        </script>
+    
+</body>
+</html>
