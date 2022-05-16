@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment_form.css" >
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/GreenOrganic.png" alt="Green Organic Logo" style="height: 140px; border-radius: 50%;" >
+            <a href="home.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="IndoorPlants.html">Shop</a>
+            <a href="info.html">Info</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form method="post" name="form1" onsubmit="return validate();">
+                <h1 class="main_heading">Payment Form</h1>
+                <hr>
+                <h2>User Information</h2>
+                <p>Name :* <input type="text" name="name" placeholder="Oom Kapoor" required></p>
+                <fieldset>
+                    <legend>Gender :</legend>
+                    <p>
+                        Male <input type="radio" name="gender" id="male">
+                        Female <input type="radio" name="gender" id="female">
+                        Others <input type="radio" name="gender" id="others">
+                    </p>
+                </fieldset>
+                <p>Address :* <textarea name="address" id="address" cols="100" rows="8" placeholder="Enter your Address" required></textarea> </p>
+                <p>Email :* <input type="email" name="email" id="email" placeholder="kapoor@gmail.com" required></p>
+                <p>Pincode :* <input type="number" name="pincode" id="pincode" size="6" placeholder="Enter your Pincode" required></p>
+                <h2>Payment Information</h2>
+                <p>Card Type :*
+                    <input type="radio" name="card" id="visa" required><img class="visa" src="images/visa.png" alt="visa">
+                    <input type="radio" name="card" id="mastercard" required><img class="mastercard" src="images/mastercard.png" alt="Mastercard">
+                    <input type="radio" name="card" id="rupay" required><img class="rupay" src="images/rupay.png" alt="Rupay">
+                </p>
+                <p>Card Number :*
+                    <input type="number" name="card_number" id="card_number" size="16" placeholder="Enter your Card Number" required>
+                </p>
+                <p>Expiration Date :* <input type="date" name="exp_date"  id="exp_date" required></p>
+                <p>CVV :* <input type="password" name="cvv" id="cvv" size="3" placeholder="Enter your CVV" required></p>
+                <input type="submit" value="Pay Now" >
+            </form>
+        </div>
+    </main>
+    <footer>
+        <a href="home.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="IndoorPlants.html">Shop</a>
+        <a href="info.html">Info</a>
+        <a href="login.html">Login</a>
+        <br>
+        <br>
+        <a href="IndoorPlants.html">Indoor Plants |</a>
+        <a href="Flowering.html">Flowering Plants |</a>
+        <a href="Outdoor.html">Outdoor Plants |</a>
+        <a href="clay.html">Clay Pots</a>
+        <a class="copyright">&copy; 2022 | Green Organic</a>
+    </footer>
+    <script language="JavaScript" type="text/javascript">
+        function validate() {
+        if (document.form1.name.value.length < 3) {
+        alert("Please enter your full name.");
+        return false;
+        }
+        if (document.form1.address.value.length < 3) {
+        alert("Please enter your address.");
+        return false;
+        }
+        if (document.form1.pincode.value.length < 6) {
+        alert("Please enter a correct pincode.");
+        return false;
+        }
+        if (document.form1.card_number.value.length < 16) {
+        alert("Please enter a valid card number.");
+        return false;
+        }
+        if (document.form1.cvv.value.length < 3) {
+        alert("Please enter your correct cvv.");
+        }
+        return true;
+        }
+        </script>
+</body>
+</html>
